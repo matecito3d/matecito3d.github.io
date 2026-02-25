@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matecito 3D | Impresión 3D Personalizada</title>
+  <meta name="description" content="Matecito 3D – Impresión 3D personalizada en PLA. Soportes, organizadores, regalos y piezas a medida." />
+  <link rel="icon" href="/img/logo-matecito3d.jpg" type="image/png">
+  <style>
+    :root {
+      --bg: #0f172a; /* azul oscuro */
+      --card: #111827;
+      --primary: #38bdf8; /* celeste */
+      --accent: #22c55e; /* verde */
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      background: linear-gradient(180deg, #020617, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    header img {
+      width: 140px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: .5rem;
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .8rem 1.4rem;
+      border-radius: .6rem;
+      background: var(--primary);
+      color: #020617;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform .15s ease, box-shadow .15s ease;
+      box-shadow: 0 10px 30px rgba(56,189,248,.25);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      display: grid;
+      gap: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(180deg, #020617, var(--card));
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,.05);
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: .75rem;
+      margin-bottom: .8rem;
+    }
+
+    .card h3 { margin-bottom: .3rem; }
+    .card p { color: var(--muted); font-size: .95rem; }
+
+    .contact {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-items: center;
+    }
+
+    .contact a {
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      padding: 1rem 1.2rem;
+      border-radius: .8rem;
+      background: #020617;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+/* PROCESO IMPRESIÓN 3D */
+.proceso {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.proceso-imagen {
+  position: sticky;
+  top: 120px;
+  width: 40%;
+  height: 420px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,.45);
+}
+
+.proceso-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity .4s ease;
+}
+
+.proceso-pasos {
+  width: 60%;
+}
+
+.proceso-paso {
+  margin-bottom: 280px;
+}
+
+.proceso-paso h3 {
+  font-size: 1.6rem;
+  margin-bottom: .6rem;
+  color: var(--primary);
+}
+
+.proceso-paso p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .proceso {
+    flex-direction: column;
+  }
+
+  .proceso-imagen {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    top: 0;
+  }
+
+  .proceso-pasos {
+    width: 100%;
+  }
+
+  .proceso-paso {
+    margin-bottom: 120px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Reemplazá src por tu logo en buena resolución -->
+    <img src="/img/logo-matecito3d.jpg" alt="Logo Matecito 3D" style="border-radius: 90px;">
+    <h1>Matecito 3D</h1>
+    <p>Impresión 3D personalizada en <strong>PLA</strong>. Diseñamos e imprimimos soportes, organizadores, regalos y piezas a medida.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a class="btn" href="https://www.instagram.com/matecito3d" target="_blank">📸 Instagram</a>
+      <a class="btn" style="background:#22c55e;box-shadow:0 10px 30px rgba(34,197,94,.25);" href="https://wa.me/5491112345678" target="_blank">💬 WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Qué hacemos</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="/img/63c85d8fea3a65f4a0888e30607c53a7_display_large.webp" alt="Soportes 3D">
+          <h3>Soportes y organizadores</h3>
+          <p>Soluciones prácticas para el día a día, impresas en PLA.</p>
+        </div>
+        <div class="card">
+          <img src="/img/PXL_20231010_020104744.jpg" alt="Accesorios 3D">
+          <h3>Accesorios útiles</h3>
+          <p>Diseños funcionales y personalizados según tu necesidad.</p>
+        </div>
+        <div class="card">
+          <img src="/img/ventaja-merchandising-empresarial-fus3d.webp" alt="Regalos personalizados">
+          <h3>Regalos personalizados</h3>
+          <p>Ideales para cumpleaños, ferias o emprendimientos.</p>
+        </div>
+        <div class="card">
+          <img src="/img/20240815_173459-rotated-1-500x500.webp" alt="Piezas a medida">
+          <h3>Piezas a medida</h3>
+          <p>Repuestos y soluciones específicas impresas en 3D.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div>
+        <h2>Contacto</h2>
+        <p class="muted">Respondemos por Instagram o email. Contanos tu idea y la hacemos real en 3D.</p>
+      </div>
+      <div class="grid">
+        <a href="https://www.instagram.com/matecito3d" target="_blank">📸 Instagram: @matecito3d</a>
+        <a href="https://wa.me/5491112345678" target="_blank">💬 WhatsApp</a>
+        <a href="mailto:matecito3d@gmail.com">✉️ matecito3d@gmail.com</a>
+      </div>
+    </section>
+
+<section>
+  <h2>Cómo trabajamos</h2>
+
+  <div class="proceso">
+
+    <div class="proceso-imagen">
+      <img
+        id="imagenProceso"
+        src="/img/3.png"
+        alt="Proceso de impresión 3D"
+      >
+    </div>
+
+    <div class="proceso-pasos">
+
+      <div
+        class="proceso-paso"
+        data-img="/img/3.png"
+      >
+        <h3>Paso 1 · Diseño 3D en Fusion 360</h3>
+        <p>
+          Para poder realizar cualquier impresión 3D se debe realizar el Diseño 3D o Modelado 3D de la pieza que se pretende imprimir. En dicho paso le damos volumen y dimensión en un software a cada pieza o parte que luego se fabricará mediante la impresión 3D. Cabe mencionar que el diseño 3D es perfecto para cualquier método de fabricación industrial, como mecanizado, tornería, inyección por molde, etc.
+        </p>
+      </div>
+
+      <div
+        class="proceso-paso"
+        data-img="/img/Captura%20de%20pantalla%202026-01-17%20224007.png"
+      >
+        <h3>Paso 2 · Configuración 3D</h3>
+        <p>
+          En este paso importamos el archivo STL generado en el paso anterior y configuramos todos los parámetros de impresión necesarios dependiendo de varios factores como son la resolución, el uso de cada pieza, la resistencia que se pretende obtener, la funcionalidad de la pieza, la posición de impresión que se utilizará, sobre el material a utilizar ya que cada uno tiene distinta configuración.
+        </p>
+        
+      </div>
+
+      <div
+        class="proceso-paso"
+        data-img="/img/Captura%20de%20pantalla%202026-01-17%20224029.png"
+      >
+        <h3>Paso 3 · Impresión 3D</h3>
+        <p>
+          Preparamos la máquina con el material y color necesario y ejecutamos el programa realizado en el paso anterior. Es importante destacar que la impresión 3D no trata de ejecutar un programa y listo. Es un proceso que requiere de varios pasos como la buena calibración de la máquina a utilizar, ya que por ejemplo una mala configuración puede generarnos problemas al querer imprimir una pieza. Cada pieza o parte es un mundo.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+<script>
+  const pasos = document.querySelectorAll(".proceso-paso");
+  const imagen = document.getElementById("imagenProceso");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          imagen.style.opacity = 0;
+          setTimeout(() => {
+            imagen.src = entry.target.dataset.img;
+            imagen.style.opacity = 1;
+          }, 200);
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  pasos.forEach(paso => observer.observe(paso));
+</script>
+
+</body>
+</html>
