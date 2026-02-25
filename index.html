@@ -29,22 +29,22 @@
       <h2>Qué hacemos</h2>
       <div class="grid">
         <div class="card">
-          <img src="/img/63c85d8fea3a65f4a0888e30607c53a7_display_large.webp" alt="Soportes 3D">
+          <img src="img/63c85d8fea3a65f4a0888e30607c53a7_display_large.webp" alt="Soportes 3D">
           <h3>Soportes y organizadores</h3>
           <p>Soluciones prácticas para el día a día, impresas en PLA.</p>
         </div>
         <div class="card">
-          <img src="/img/PXL_20231010_020104744.jpg" alt="Accesorios 3D">
+          <img src="img/PXL_20231010_020104744.jpg" alt="Accesorios 3D">
           <h3>Accesorios útiles</h3>
           <p>Diseños funcionales y personalizados según tu necesidad.</p>
         </div>
         <div class="card">
-          <img src="/img/ventaja-merchandising-empresarial-fus3d.webp" alt="Regalos personalizados">
+          <img src="img/ventaja-merchandising-empresarial-fus3d.webp" alt="Regalos personalizados">
           <h3>Regalos personalizados</h3>
           <p>Ideales para cumpleaños, ferias o emprendimientos.</p>
         </div>
         <div class="card">
-          <img src="/img/20240815_173459-rotated-1-500x500.webp" alt="Piezas a medida">
+          <img src="img/20240815_173459-rotated-1-500x500.webp" alt="Piezas a medida">
           <h3>Piezas a medida</h3>
           <p>Repuestos y soluciones específicas impresas en 3D.</p>
         </div>
@@ -69,7 +69,7 @@
   <!-- PASO 1 -->
   <div class="proceso-item">
     <div class="proceso-img">
-      <img src="img/3.png" alt="Diseño 3D">
+      <img src="img/Paso-1.png" alt="Diseño 3D">
     </div>
     <div class="proceso-texto">
       <h3>Paso 1 · Diseño 3D en Fusion 360</h3>
@@ -84,7 +84,7 @@
   <!-- PASO 2 -->
   <div class="proceso-item reverse">
     <div class="proceso-img">
-      <img src="img/Captura de pantalla 2026-01-17 224007.png" alt="Configuración 3D">
+      <img src="img/Paso-2.png" alt="Configuración 3D">
     </div>
     <div class="proceso-texto">
       <h3>Paso 2 · Configuración de impresión</h3>
@@ -99,7 +99,7 @@
   <!-- PASO 3 -->
   <div class="proceso-item">
     <div class="proceso-img">
-      <img src="img/Captura de pantalla 2026-01-17 224029.png" alt="Impresión 3D">
+      <img src="img/Paso-3.png" alt="Impresión 3D">
     </div>
     <div class="proceso-texto">
       <h3>Paso 3 · Impresión 3D</h3>
@@ -115,27 +115,6 @@
 
   </main>
 
-<script>
-  const pasos = document.querySelectorAll(".proceso-paso");
-  const imagen = document.getElementById("imagenProceso");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          imagen.style.opacity = 0;
-          setTimeout(() => {
-            imagen.src = entry.target.dataset.img;
-            imagen.style.opacity = 1;
-          }, 200);
-        }
-      });
-    },
-    { threshold: 0.6 }
-  );
-
-  pasos.forEach(paso => observer.observe(paso));
-</script>
 
 </body>
 </html>
