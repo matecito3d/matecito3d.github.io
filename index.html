@@ -5,199 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matecito 3D | Impresión 3D Personalizada</title>
   <meta name="description" content="Matecito 3D – Impresión 3D personalizada en PLA. Soportes, organizadores, regalos y piezas a medida." />
-  <link rel="icon" href="img/logo-matecito3d.jpg" type="image/jpg">
-  <style>
-    :root {
-      --bg: #0f172a; /* azul oscuro */
-      --card: #111827;
-      --primary: #38bdf8; /* celeste */
-      --accent: #22c55e; /* verde */
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
-      background: linear-gradient(180deg, #020617, var(--bg));
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    header img {
-      width: 140px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    header h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: .5rem;
-    }
-
-    header p {
-      color: var(--muted);
-      max-width: 680px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: .8rem 1.4rem;
-      border-radius: .6rem;
-      background: var(--primary);
-      color: #020617;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform .15s ease, box-shadow .15s ease;
-      box-shadow: 0 10px 30px rgba(56,189,248,.25);
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-      display: grid;
-      gap: 3rem;
-    }
-
-    .grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .card {
-      background: linear-gradient(180deg, #020617, var(--card));
-      border-radius: 1rem;
-      padding: 1.5rem;
-      border: 1px solid rgba(255,255,255,.05);
-      box-shadow: 0 10px 40px rgba(0,0,0,.35);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: .75rem;
-      margin-bottom: .8rem;
-    }
-
-    .card h3 { margin-bottom: .3rem; }
-    .card p { color: var(--muted); font-size: .95rem; }
-
-    .contact {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      align-items: center;
-    }
-
-    .contact a {
-      color: var(--text);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-      padding: 1rem 1.2rem;
-      border-radius: .8rem;
-      background: #020617;
-      border: 1px solid rgba(255,255,255,.06);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; }
-    }
-/* PROCESO IMPRESIÓN 3D */
-.proceso {
-  display: flex;
-  gap: 3rem;
-  align-items: flex-start;
-}
-
-.proceso-imagen {
-  position: sticky;
-  top: 120px;
-  width: 40%;
-  height: 420px;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,.45);
-}
-
-.proceso-imagen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity .4s ease;
-}
-
-.proceso-pasos {
-  width: 60%;
-}
-
-.proceso-paso {
-  margin-bottom: 280px;
-}
-
-.proceso-paso h3 {
-  font-size: 1.6rem;
-  margin-bottom: .6rem;
-  color: var(--primary);
-}
-
-.proceso-paso p {
-  color: var(--muted);
-  font-size: 1rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .proceso {
-    flex-direction: column;
-  }
-
-  .proceso-imagen {
-    position: relative;
-    width: 100%;
-    height: 260px;
-    top: 0;
-  }
-
-  .proceso-pasos {
-    width: 100%;
-  }
-
-  .proceso-paso {
-    margin-bottom: 120px;
-  }
-}
-
-
-  </style>
+  
+  <link rel="icon" href="img/logo-matecito3d.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <header>
-    <!-- Reemplazá src por tu logo en buena resolución -->
-    <img src="/img/logo-matecito3d.jpg" alt="Logo Matecito 3D" style="border-radius: 90px;">
+    <img src="img/logo-matecito3d.jpg" alt="Logo Matecito 3D" class="logo">
     <h1>Matecito 3D</h1>
     <p>Impresión 3D personalizada en <strong>PLA</strong>. Diseñamos e imprimimos soportes, organizadores, regalos y piezas a medida.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+
+    <div class="header-buttons">
       <a class="btn" href="https://www.instagram.com/matecito3d" target="_blank">📸 Instagram</a>
-      <a class="btn" style="background:#22c55e;box-shadow:0 10px 30px rgba(34,197,94,.25);" href="https://wa.me/5491112345678" target="_blank">💬 WhatsApp</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/5491112345678" target="_blank">💬 WhatsApp</a>
     </div>
   </header>
 
